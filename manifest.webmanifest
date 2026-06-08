@@ -1,12 +1,12 @@
 {
-  "name": "Offline Pharmacy HIS V8",
-  "short_name": "Offline Pharmacy V8",
+  "name": "Offline Pharmacy HIS V10",
+  "short_name": "Offline Pharmacy",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f0fdfa",
   "theme_color": "#10b981",
-  "description": "Offline pharmacy workflow for mobile medical units",
+  "description": "Offline pharmacy workflow for mobile medical units with doctor and pharmacy routes",
   "icons": [
     {
       "src": "./assets/icon-192.png",
@@ -17,6 +17,32 @@
       "src": "./assets/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "แพทย์สร้างใบสั่งยา",
+      "short_name": "แพทย์",
+      "url": "./doctor/doctor.html",
+      "icons": [
+        {
+          "src": "./assets/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "ห้องยาจัดจ่ายยา",
+      "short_name": "ห้องยา",
+      "url": "./pharmacy/pharmacy.html",
+      "icons": [
+        {
+          "src": "./assets/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }

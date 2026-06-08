@@ -1,0 +1,2 @@
+﻿Code,Name,ENName,DrugGenericName,THTradeName,CurrentPrice,BaseUnit,IsDisabled,DrugCategoryName,EffectNote,RecommendNote,PrecautionNote,Note
+PARA500,พาราเซตามอล 500 มก. เม็ด,Paracetamol 500 mg tablet,Paracetamol,พาราเซตามอล,1.00,เม็ด,FALSE,ยาในบัญชียาหลัก,บรรเทาอาการปวดและลดไข้,ใช้ตามขนาดที่กำหนด,ระวังการใช้ยาซ้ำซ้อน,ตัวอย่าง: ระบบรับเฉพาะ IsDisabled = FALSE

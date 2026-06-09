@@ -1,1 +1,75 @@
-<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10b981"><link rel="manifest" href="./manifest.webmanifest"><title>Offline Pharmacy HIS V10</title><style>body{font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Thai",Tahoma,sans-serif;margin:0;min-height:100vh;display:grid;place-items:center;background:linear-gradient(135deg,#ecfdf5,#fdf2f8,#f5f3ff);color:#134e4a}.wrap{max-width:900px;padding:22px}.hero{background:#ffffffee;border:1px solid #ecfdf5;border-radius:28px;padding:24px;box-shadow:0 18px 48px #0f766e18}.logo{width:76px;height:76px}.logo img{width:100%;height:100%;object-fit:contain}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:16px}.card{display:block;text-decoration:none;color:#134e4a;padding:18px;border-radius:20px;background:#fff;border:1px solid #d1fae5;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px #0f766e18}.card b{font-size:18px}.card p,.note{font-size:13px;line-height:1.6;color:#64748b}.pill{display:inline-block;padding:7px 10px;border-radius:999px;background:#d1fae5;font-size:12px;font-weight:800}.credit{margin-top:15px;padding-top:12px;border-top:1px dashed #d1fae5;text-align:center;font-size:11px;line-height:1.65;color:#64748b}.credit a{color:#0f766e;text-decoration:none;font-weight:800}</style></head><body><div class="wrap"><div class="hero"><div class="logo"><img src="./assets/logoUBCH.png" alt="logo"></div><h1>Offline Pharmacy HIS V10</h1><span class="pill">PWA · เปิดออนไลน์ครั้งแรกเพื่อติดตั้ง</span><p>เลือก workflow ให้เหมาะกับรูปแบบออกหน่วยของโรงพยาบาล</p><div class="grid"><a class="card" href="./doctor/doctor.html"><b>🩺 เริ่มจากแพทย์</b><p>แพทย์หรือผู้คีย์ยาสร้างใบสั่งพร้อม QR ห้องยา Log in และสแกนเพื่อจัดยา</p></a><a class="card" href="/pharmacy/pharmacy.html"><b>💊 เริ่มจากห้องยา</b><p>ห้องยา Log in คีย์ยา ตรวจฉลาก พิมพ์ฉลาก ส่งจ่ายเงิน และเก็บประวัติ</p></a></div><div class="note">บัญชีผู้ใช้บันทึกเฉพาะในอุปกรณ์นั้น ๆ หลังติดตั้งแล้วข้อมูลและ workflow หลักทำงานออฟไลน์ได้ ก่อนใช้จริงให้ทดลองกับเครื่องพิมพ์ฉลากและ master data ของหน่วยงาน</div><div class="credit">พัฒนาโดย <b>ภก.จุมพล อุทธา</b> · หัวหน้างานคลังยาและเภสัชสารสนเทศ · กลุ่มงานเภสัชกรรม · โรงพยาบาลมะเร็งอุบลราชธานี · โทร <a href="tel:0897179248">0897179248</a></div></div></div><script>if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});</script></body></html>
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <title>Offline Pharmacy HIS V12</title>
+  <style>
+    :root{--teal:#0f766e;--teal2:#14b8a6;--mint:#d1fae5;--mint2:#ecfdf5;--pink:#fce7f3;--lav:#ede9fe;--sky:#e0f2fe;--ink:#123c3b;--muted:#64748b;--line:#d9eee8;--card:#ffffffee;--shadow:0 18px 50px rgba(15,118,110,.14)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Thai",Tahoma,sans-serif;color:#243b3b;background:radial-gradient(circle at 8% 0%,#d1fae5 0 14%,transparent 33%),radial-gradient(circle at 100% 22%,#fce7f3 0 10%,transparent 28%),linear-gradient(145deg,#f7fffc,#fff9fc 55%,#f7f5ff)}
+    a{text-decoration:none}.shell{width:min(1120px,100%);margin:auto;padding:20px}.hero{position:relative;overflow:hidden;background:var(--card);border:1px solid #e7f8f3;border-radius:30px;padding:24px;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-78px;top:-95px;background:linear-gradient(135deg,#a7f3d0,#ddd6fe);opacity:.55}.brand{display:flex;align-items:center;gap:14px;position:relative;z-index:1}.brand img{width:76px;height:76px;object-fit:contain;background:#fff;border-radius:19px;padding:5px;border:1px solid #d1fae5}.eyebrow{display:inline-flex;gap:6px;align-items:center;background:#d1fae5;color:#047857;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900}.hero h1{font-size:clamp(27px,4vw,44px);line-height:1.12;margin:14px 0 8px;color:var(--ink);position:relative;z-index:1}.hero p{max-width:760px;margin:0;color:#526a6a;line-height:1.7;position:relative;z-index:1}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px;position:relative;z-index:1}.chip{padding:7px 10px;border-radius:999px;background:#fff;border:1px solid #d1fae5;font-size:12px;font-weight:850;color:#0f766e}
+    .section{margin-top:18px}.section-title{display:flex;align-items:center;gap:9px;margin:0 0 11px;color:var(--ink);font-size:20px}.grid{display:grid;gap:14px}.flows{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}.flow{display:flex;flex-direction:column;gap:10px;min-height:215px;padding:18px;border-radius:23px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 28px rgba(15,118,110,.08);transition:.18s}.flow:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(15,118,110,.15)}.flow.doctor{background:linear-gradient(145deg,#fff,#effdf8)}.flow.pharmacy{background:linear-gradient(145deg,#fff,#fff5fb)}.icon{display:grid;place-items:center;width:54px;height:54px;border-radius:18px;font-size:27px;background:#d1fae5}.pharmacy .icon{background:#fce7f3}.flow h2{font-size:20px;margin:0;color:#134e4a}.flow p{margin:0;color:#64748b;line-height:1.65;font-size:14px}.go{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:14px;padding:11px 13px;background:linear-gradient(135deg,#10b981,#0f766e);color:#fff;font-weight:900}.pharmacy .go{background:linear-gradient(135deg,#ec4899,#be185d)}
+    .setup{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:14px}.card{background:#ffffffed;border:1px solid #e5f4ef;border-radius:22px;padding:17px;box-shadow:0 10px 26px rgba(15,118,110,.07)}.card h2,.card h3{margin:0 0 8px;color:#134e4a}.card p{margin:6px 0;color:#64748b;font-size:14px;line-height:1.65}.command-wrap{display:flex;gap:8px;align-items:stretch;margin-top:10px}.command{flex:1;display:block;overflow:auto;padding:12px 13px;border-radius:14px;background:#103d3b;color:#d1fae5;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;white-space:nowrap}.btn{border:0;border-radius:13px;padding:10px 13px;font:inherit;font-weight:900;cursor:pointer}.btn-copy{background:#d1fae5;color:#047857}.btn-copy:hover{background:#a7f3d0}.small{font-size:12px;color:#64748b;line-height:1.6}.steps{counter-reset:step;display:grid;gap:9px}.step{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:15px;background:#f8fffd;border:1px solid #e5f4ef}.step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#0f766e;color:#fff;font-size:12px;font-weight:900}.step b{display:block;color:#134e4a;font-size:14px}.step span{display:block;color:#64748b;font-size:12px;line-height:1.45;margin-top:2px}.checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}.check{padding:11px 12px;border-radius:15px;background:#fff;border:1px solid #e5f4ef;color:#526a6a;font-size:13px;line-height:1.55}.check b{color:#134e4a}.foot{margin:19px 0 4px;padding:13px;border-top:1px dashed #cce8df;text-align:center;color:#64748b;font-size:11px;line-height:1.7}.foot a{color:#0f766e;font-weight:900}
+    @media(max-width:760px){.shell{padding:11px}.hero{padding:17px;border-radius:23px}.brand img{width:62px;height:62px}.setup{grid-template-columns:1fr}.command-wrap{flex-direction:column}.btn-copy{width:100%}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="brand">
+        <img src="./assets/logoUBCH.png" alt="ตราโรงพยาบาลมะเร็งอุบลราชธานี">
+        <div><span class="eyebrow">💊 ระบบออกหน่วยแบบ Offline</span><h1>Offline Pharmacy HIS <small style="font-size:.48em;color:#0f766e">V12</small></h1></div>
+      </div>
+      <p>เลือกจุดเริ่มงานให้ตรงกับบริบทของหน่วยบริการ ใช้งานหลักได้แม้ไม่มีอินเทอร์เน็ต หลังเปิดเว็บไซต์ออนไลน์ครั้งแรกและติดตั้ง PWA เรียบร้อยแล้ว</p>
+      <div class="chips"><span class="chip">Offline-first PWA</span><span class="chip">QR ใบสั่งยาแบบย่อ</span><span class="chip">ฉลากยา 80 × 50 mm</span><span class="chip">แยก Printer ด้วย QZ Tray</span></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">🚀 เลือก Workflow เพื่อเริ่มใช้งาน</h2>
+      <div class="grid flows">
+        <a class="flow doctor" href="./doctor/doctor.html">
+          <div class="icon">🩺</div><h2>เริ่มจากแพทย์</h2>
+          <p>แพทย์หรือผู้คีย์ยาสร้างใบสั่งยา ตรวจฉลากจำลอง และสร้าง QR code ให้ห้องยาสแกนเพื่อจัดจ่าย</p>
+          <span class="go">เปิดหน้าแพทย์ →</span>
+        </a>
+        <a class="flow pharmacy" href="./pharmacy/pharmacy.html">
+          <div class="icon">💊</div><h2>เริ่มจากห้องยา</h2>
+          <p>ห้องยาคีย์รายการยาเอง หรือรับใบสั่งยาจาก QR จากนั้นพิมพ์ฉลาก ส่งจ่ายเงิน และเก็บประวัติ</p>
+          <span class="go">เปิดหน้าห้องยา →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section setup">
+      <div class="card">
+        <h2>🖨️ ติดตั้ง QZ Tray แบบ Run Script</h2>
+        <p>ใช้สำหรับแยก Printer ฉลากยา 80 × 50 mm และ Printer เอกสาร A4 โดยไม่ต้องเลือกเครื่องพิมพ์ใหม่ทุกครั้ง เปิด <b>PowerShell แบบ Run as Administrator</b> แล้ววางคำสั่งด้านล่าง</p>
+        <div class="command-wrap"><code class="command" id="install-command">กำลังสร้างคำสั่ง...</code><button class="btn btn-copy" id="copy-install">คัดลอกคำสั่ง</button></div>
+        <p class="small">สคริปต์จะดาวน์โหลดตัวติดตั้ง QZ Tray รุ่นล่าสุดจาก GitHub Repository ทางการของ QZ Industries และเปิดตัวติดตั้ง Windows ให้ยืนยันตามขั้นตอน หากเครื่องมี QZ Tray อยู่แล้ว ไม่จำเป็นต้องติดตั้งซ้ำ</p>
+      </div>
+      <div class="card">
+        <h3>ขั้นตอนก่อนออกหน่วย</h3>
+        <div class="steps"><div class="step"><div><b>เปิดออนไลน์ครั้งแรก</b><span>เข้าเว็บไซต์และเปิดหน้าที่จะใช้งานอย่างน้อย 1 ครั้ง</span></div></div><div class="step"><div><b>ติดตั้ง PWA</b><span>เพิ่มแอปลง Desktop หรือหน้าจอหลัก</span></div></div><div class="step"><div><b>ตั้งค่า Printer</b><span>เข้าเมนูตั้งค่าในหน้าห้องยา เชื่อมต่อ QZ Tray และเลือก Printer 2 เครื่อง</span></div></div><div class="step"><div><b>ทดลอง Offline</b><span>ตัดอินเทอร์เน็ต ทดสอบ QR ฉลากยา และใบแจ้งชำระเงิน</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">✅ จุดที่ควรตรวจสอบก่อนใช้งานจริง</h2>
+      <div class="checklist"><div class="check"><b>Master data</b><br>โหลดรายการยา วิธีใช้ และเวลารับประทานยาล่าสุด</div><div class="check"><b>Printer ฉลาก</b><br>ทดสอบกระดาษ 80 × 50 mm และ Layout ฉลากยา</div><div class="check"><b>Printer A4</b><br>ทดสอบใบสั่งยาและใบแจ้งชำระเงิน</div><div class="check"><b>QR scanner</b><br>ทดลองสแกนใบสั่งยาหลายรายการก่อนออกหน่วย</div></div>
+    </section>
+
+    <footer class="foot">พัฒนาโดย <b>ภก.จุมพล อุทธา</b> · หัวหน้างานคลังยาและเภสัชสารสนเทศ · กลุ่มงานเภสัชกรรม · โรงพยาบาลมะเร็งอุบลราชธานี · โทร <a href="tel:0897179248">0897179248</a></footer>
+  </main>
+  <script>
+    const command = `irm "${location.origin}/pwsh.sh" | iex`;
+    document.getElementById('install-command').textContent = command;
+    document.getElementById('copy-install').onclick = async () => {
+      try { await navigator.clipboard.writeText(command); document.getElementById('copy-install').textContent='คัดลอกแล้ว ✓'; setTimeout(()=>document.getElementById('copy-install').textContent='คัดลอกคำสั่ง',1800); }
+      catch(e){ prompt('คัดลอกคำสั่งนี้', command); }
+    };
+    if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+  </script>
+</body>
+</html>
